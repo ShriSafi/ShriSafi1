@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>register</title>
+<style>
+html { 
+  background: url(img10.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+</style>
+<script>
+function validate() {
+    var email = document.getElementById('Email');
+    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+    
+
+    if (document.registration.Username.value == 0) {
+        alert("Enter username");
+		return false;
+    }
+ 
+    else if (document.registration.Email.value == 0) {
+        alert("enter email");
+		return false;
+    }
+    else if (document.registration.Location.value == 0) {
+        alert("enter location");
+		return false;
+    }
+	else if (!filter.test(email.value)) {
+    alert('Please provide a valid email address');
+    email.focus;
+    return false;
+ }
+    else {
+ 
+        alert("Sucessfully submitted");
+    }
+}
+</script>
+</head>
+<body>
+<center>
+<font size="26" color="white"><b>REGISTER</B></font><br><br><br><br><br>
+<font size="20" color="white">
+    <form name="registration" id="registration" onsubmit="return validate()" action="reg1.php?savedata=1" method="post">
+    <div>
+        Username:<input type="text" name="Username" id="Username" /><br />
+        <br />
+        email id:<input type="text" name="Email"  id="Email"/><br />
+        <br />
+        location:<input type="text" name="Location"  id="Location"/><br />
+        <br />
+       <a href="login.html"> <input type="submit" value="submit" onclick="validate()"/></a>
+        <br />
+        <br />
+    </div>
+    </form>
+	</font>
+</center>
+</body>
+</html>
