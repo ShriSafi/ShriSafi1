@@ -1,0 +1,59 @@
+<html>
+<head>
+<title>book park</title>
+<style>
+html { 
+  background: url(events.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+}
+
+</style>
+<script>
+function validate() {
+    
+ 
+        alert("Sucessfully booked tickets for amusement park");
+    
+}
+
+</script>
+</head><body>
+<center>
+<font size="26" color="white"><b>Amusement Parks</B></font><br><br><br><br><br>
+<font size="20" color="white">
+    <form name="registration" id="registration" onsubmit="return validate()">
+    <div>
+        
+        <br />
+        Amusement Park :<SELECT NAME="movie" id="movie">
+<OPTION> MGM</option>
+<OPTION> VGP</option>
+<OPTION> QUEENS LAND</option>
+</select>
+<br />
+        <br />
+        
+No. Of persons:<SELECT NAME="no" id="no">
+<OPTION> 1</option>
+<OPTION> 2</option>
+<OPTION> 3</option>
+<OPTION> 4</option>
+<OPTION> 5</option>
+<OPTION> 6</option>
+<OPTION> 7</option>
+</SELECT>
+        <br />
+        <input type="submit" value="book" onclick="validate()"/> <BR>
+		
+        <br />
+        <br />
+    </div>
+    </form>
+	<a href="bookcab.html">Click here to book for cab</a>
+	</font>
+</center>
+</body>
